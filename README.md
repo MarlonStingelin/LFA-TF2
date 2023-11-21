@@ -122,13 +122,13 @@ digraph finite_state_machine {
     qx -> S [ label = "(,,-,-)" ];
     qy -> S [ label = "(,,-,-)" ];
     qz -> S [ label = "(,,-,-)" ];
-    qf -> S [ label = "(,,-,-)" ];
+    qf -> S [ label = "(,,F,T)" ];
     qi -> S [ label = "(,,-,-)" ];
     
     qx -> F [ label = "(.,-,-)" ];
     qy -> F [ label = "(.,-,-)" ];
     qz -> F [ label = "(.,-,-)" ];
-    qf -> F [ label = "(.,-,-)" ];
+    qf -> F [ label = "(.,F,T)" ];
     qi -> F [ label = "(.,-,-)" ];
     
 }
