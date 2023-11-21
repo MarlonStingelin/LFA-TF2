@@ -73,4 +73,5 @@ fita: ax,by,cf,bz,dy,af,by,bz,by n max de produção: 7
 fita: ax,by,cf,bz,dy,af,by,bi,bi
 
 Agora a fita esta pronta para ser lida pelo automato com pilha responsavél pela linha de produção
+Antes de começar irei explicar qual a função da pilha desse automato ela pode empilhar apenas as letras "T" e "F" aonde "T" significa um veiculo montado com sucesso e "F" um veiculo que apresentou falha em sua montagem. A pilha tem um valor maximo sendo esse o número max de produção acrescido de um, ela so pode resultar pilhas com no maximo o valor maximo de produção, contudo ela contém um unidade a mais na pilha para não apresentar erros em decorrencia dos veiculos pedidos que não poderam ser montados no dia. 
 
