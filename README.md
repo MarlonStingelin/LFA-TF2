@@ -75,3 +75,60 @@ fita: ax,by,cf,bz,dy,af,by,bi,bi
 Agora a fita esta pronta para ser lida pelo automato com pilha responsavél pela linha de produção
 Antes de começar irei explicar qual a função da pilha desse automato ela pode empilhar apenas as letras "T" e "F" aonde "T" significa um veiculo montado com sucesso e "F" um veiculo que apresentou falha em sua montagem. A pilha tem um valor maximo sendo esse o número max de produção acrescido de um, ela so pode resultar pilhas com no maximo o valor maximo de produção, contudo ela contém um unidade a mais na pilha para não apresentar erros em decorrencia dos veiculos pedidos que não poderam ser montados no dia. 
 
+digraph finite_state_machine {
+    rankdir=LR;
+    size="8,5"
+
+    node [shape = doublecircle]; F;
+    node [shape = point]; qi
+
+    node [shape = circle];
+    
+    qi -> S;
+    
+    S  -> qa  [ label = "(a,T,-)" ];
+    /*
+    S  -> qb  [ label = "(b,T,-)" ];
+    S  -> qc  [ label = "(c,T,-)" ];
+    S  -> qd  [ label = "(d,T,-)" ];
+    */
+    
+    qa -> qx [ label = "(x,-,-)" ];
+    qa -> qy [ label = "(y,-,-)" ];
+    qa -> qz [ label = "(z,-,-)" ];
+    qa -> qf [ label = "(f,-,-)" ];
+    qa -> qi [ label = "(i,-,-)" ];
+    
+    /*
+    qb -> qx [ label = "(x,-,-)" ];
+    qb -> qy [ label = "(y,-,-)" ];
+    qb -> qz [ label = "(z,-,-)" ];
+    qb -> qf [ label = "(f,-,-)" ];
+    qb -> qi [ label = "(i,-,-)" ];
+    
+    qc -> qx [ label = "(x,-,-)" ];
+    qc -> qy [ label = "(y,-,-)" ];
+    qc -> qz [ label = "(z,-,-)" ];
+    qc -> qf [ label = "(f,-,-)" ];
+    qc -> qi [ label = "(i,-,-)" ];
+    
+    qd -> qx [ label = "(x,-,-)" ];
+    qd -> qy [ label = "(y,-,-)" ];
+    qd -> qz [ label = "(z,-,-)" ];
+    qd -> qf [ label = "(f,-,-)" ];
+    qd -> qi [ label = "(i,-,-)" ];
+    */
+    
+    qx -> S [ label = "(,,-,-)" ];
+    qy -> S [ label = "(,,-,-)" ];
+    qz -> S [ label = "(,,-,-)" ];
+    qf -> S [ label = "(,,-,-)" ];
+    qi -> S [ label = "(,,-,-)" ];
+    
+    qx -> F [ label = "(.,-,-)" ];
+    qy -> F [ label = "(.,-,-)" ];
+    qz -> F [ label = "(.,-,-)" ];
+    qf -> F [ label = "(.,-,-)" ];
+    qi -> F [ label = "(.,-,-)" ];
+    
+}
