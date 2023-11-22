@@ -79,56 +79,56 @@ digraph finite_state_machine {
     rankdir=LR;
     size="8,5"
 
-    node [shape = doublecircle]; F;
-    node [shape = point]; qi
+node [shape = doublecircle]; F;
+node [shape = point]; q0;
+node [shape = circle]; S;
 
-    node [shape = circle];
-    
-    qi -> S;
-    
-    S  -> qa  [ label = "(a,T,-)" ];
-    /*
-    S  -> qb  [ label = "(b,T,-)" ];
-    S  -> qc  [ label = "(c,T,-)" ];
-    S  -> qd  [ label = "(d,T,-)" ];
-    */
-    
-    qa -> qx [ label = "(x,-,-)" ];
-    qa -> qy [ label = "(y,-,-)" ];
-    qa -> qz [ label = "(z,-,-)" ];
-    qa -> qf [ label = "(f,-,-)" ];
-    qa -> qi [ label = "(i,-,-)" ];
-    
-    /*
-    qb -> qx [ label = "(x,-,-)" ];
-    qb -> qy [ label = "(y,-,-)" ];
-    qb -> qz [ label = "(z,-,-)" ];
-    qb -> qf [ label = "(f,-,-)" ];
-    qb -> qi [ label = "(i,-,-)" ];
-    
-    qc -> qx [ label = "(x,-,-)" ];
-    qc -> qy [ label = "(y,-,-)" ];
-    qc -> qz [ label = "(z,-,-)" ];
-    qc -> qf [ label = "(f,-,-)" ];
-    qc -> qi [ label = "(i,-,-)" ];
-    
-    qd -> qx [ label = "(x,-,-)" ];
-    qd -> qy [ label = "(y,-,-)" ];
-    qd -> qz [ label = "(z,-,-)" ];
-    qd -> qf [ label = "(f,-,-)" ];
-    qd -> qi [ label = "(i,-,-)" ];
-    */
-    
-    qx -> S [ label = "(,,-,-)" ];
-    qy -> S [ label = "(,,-,-)" ];
-    qz -> S [ label = "(,,-,-)" ];
-    qf -> S [ label = "(,,F,T)" ];
-    qi -> S [ label = "(,,-,-)" ];
-    
-    qx -> F [ label = "(.,-,-)" ];
-    qy -> F [ label = "(.,-,-)" ];
-    qz -> F [ label = "(.,-,-)" ];
-    qf -> F [ label = "(.,F,T)" ];
-    qi -> F [ label = "(.,-,-)" ];
-    
+q0-> S;
+
+S  -> qa  [ label = "(a,T,-)" ];
+/*
+S  -> qb  [ label = "(b,T,-)" ];
+S  -> qc  [ label = "(c,T,-)" ];
+S  -> qd  [ label = "(d,T,-)" ];
+*/
+
+qa -> qx [ label = "(x,-,-)" ];
+qa -> qy [ label = "(y,-,-)" ];
+qa -> qz [ label = "(z,-,-)" ];
+qa -> qf [ label = "(f,-,-)" ];
+qa -> qi [ label = "(i,-,-)" ];
+
+/*
+qb -> qx [ label = "(x,-,-)" ];
+qb -> qy [ label = "(y,-,-)" ];
+qb -> qz [ label = "(z,-,-)" ];
+qb -> qf [ label = "(f,-,-)" ];
+qb -> qi [ label = "(i,-,-)" ];
+
+qc -> qx [ label = "(x,-,-)" ];
+qc -> qy [ label = "(y,-,-)" ];
+qc -> qz [ label = "(z,-,-)" ];
+qc -> qf [ label = "(f,-,-)" ];
+qc -> qi [ label = "(i,-,-)" ];
+
+qd -> qx [ label = "(x,-,-)" ];
+qd -> qy [ label = "(y,-,-)" ];
+qd -> qz [ label = "(z,-,-)" ];
+qd -> qf [ label = "(f,-,-)" ];
+qd -> qi [ label = "(i,-,-)" ];
+*/
+
+qx -> S [ label = "(,,-,-)" ];
+qy -> S [ label = "(,,-,-)" ];
+qz -> S [ label = "(,,-,-)" ];
+qf -> S [ label = "(,,F,T)" ];
+qi -> S [ label = "(,,-,-)" ];
+
+qx -> F [ label = "(.,-,-)" ];
+qy -> F [ label = "(.,-,-)" ];
+qz -> F [ label = "(.,-,-)" ];
+qf -> F [ label = "(.,F,T)" ];
+qi -> F [ label = "(.,-,-)" ];
+
 }
+
