@@ -139,5 +139,27 @@ Para simplificar o automato que é muito complexo, vamos avaliar apenas um dos c
 ![image](https://github.com/MarlonStingelin/LFA-TF2/assets/151676126/c9cc8fa8-f24a-4398-8595-94fbcc380888)
 
 Agora através da observação dessa simplificação do modelo é possivel explicar o fumcionamento so automato com pilha
-para tornar mais entendivel vamos utilizar um exemplo de fita obtida através de um pedido
-Fita: ax,by,cf,dz,ai,bi.
+para tornar mais entendivel vamos utilizar um exemplo de fita obtida através de um pedido, partindo do pre subosto que a produção max do dia é 3
+Fita: ax,by,cf,di.
+utilizando essa fita o caminho descrito e sua pilha sera:
+lido & Pilha: &,&,&,&
+//por mais que possam ser produzidos apenas 3 veiculos sua pilha tera 4 elementos 
+lido a ( q0-> S; S  -> qa ) Pilha: T
+//empilha T no primeiro espaço da pilha
+lido ax ( qa -> qx ) Pilha : T
+lido ax, ( qx -> S ) Pilha : T
+lido ax,b ( S -> qb ) Pilha : T,T
+//empilha T no segundo espaço da pilha
+...
+lido ax,by,c ( S -> qc ) Pilha : T,T,T
+//empilha T no terceiro espaço da pilha
+lido ax,by,cf ( qc -> qf ) Pilha : T,T,F
+//desempilha T e empilha F no lugar
+lido ax,by,cf, ( qf -> S ) Pilha : T,T,F
+lido ax,by,cf,d ( S -> qd ) Pilha : T,T,F,T
+//recebe um T na pilha
+lido ax,by,cf,di ( qd -> qi ) Pilha : T,T,F
+//desempilha o T recebido anteriormente
+lido ax,by,cf,di. ( qi -> F ) Pilha : T,T,F
+//finaliza a execução do programa Chegando a conclusão que serão produdidos 3 veiculos destes AX, BY foram produzidos sem falha, o veiculo C apresentou falhas e o veiculo D não pode ser produzido
+
