@@ -132,6 +132,12 @@ Antes de começar irei explicar qual a função da pilha desse automato ela pode
     
     }
 
+![image](https://github.com/MarlonStingelin/LFA-TF2/assets/151676126/606d2bfc-01b4-44fb-adea-b2058b42ba03)
+
+Para simplificar o automato que é muito complexo, vamos avaliar apenas um dos carros produzidos, visto que é possivel reporduzir para os outros 3 tipos de carro.
+
 ![image](https://github.com/MarlonStingelin/LFA-TF2/assets/151676126/c9cc8fa8-f24a-4398-8595-94fbcc380888)
 
-![image](https://github.com/MarlonStingelin/LFA-TF2/assets/151676126/606d2bfc-01b4-44fb-adea-b2058b42ba03)
+Agora através da observação dessa simplificação do modelo é possivel explicar o fumcionamento so automato com pilha
+para tornar mais entendivel vamos utilizar um exemplo de fita obtida através de um pedido
+Fita: ax,by,cf,dz,ai,bi.
